@@ -1,25 +1,23 @@
+import { auth } from "@/auth";
 import Image from "next/image";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+     if(!session) {
+       redirect("/auth/login")
+     }
   return (
     <div className="bg-white text-gray-800">
-
-      <section className="bg-[url('/interior.jpg')] bg-cover bg-center text-white py-28 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-4">Good Food, Fast Delivery</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          Welcome to Aldos — your neighborhood restaurant serving freshly cooked meals
-          that hit the spot, whether you’re dining in or ordering online.
-        </p>
-        <div className="mt-6">
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-medium">
-            Order Now
-          </button>
-        </div>
+      <section className="bg-[url('/interior.png')] bg-cover bg-center text-white py-40 px-6 text-center">
+        <h1 className="text-4xl font-bold mb-4">Good Food, Fast Delivery</h1>
+        <p className="text-lg max-w-2xl mx-auto">Welcome to Final your neighborhood restaurant serving freshly cooked meals that hit the spot, whether you're dining in or ordering online.</p>
       </section>
 
       <section className="py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-8">Popular Categories</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div className="bg-gray-50 shadow-sm rounded-xl p-6">
             <Image
             src="/jollof.jpg"
@@ -49,6 +47,16 @@ export default function Home() {
             className="w-[300px] h-[300px] rounded-xl mb-4 object-cover" />
             <h3 className="text-xl font-semibold">Swallow</h3>
             <p className="text-gray-600">Fluffy swallow paired with delicious soups.</p>
+          </div>
+          <div className="bg-gray-50 shadow-sm rounded-xl p-6">
+            <Image 
+            src="/spagetti.jpg" 
+            alt="Pizza" 
+            width={300}
+            height={300}
+            className="w-[300px] h-[300px] rounded-xl mb-4 object-cover" />
+            <h3 className="text-xl font-semibold">Spagetti Alfredo</h3>
+            <p className="text-gray-600">Creamy spaghetti in rich Alfredo sauce..</p>
           </div>
         </div>
       </section>
@@ -81,19 +89,19 @@ export default function Home() {
             <p className="italic text-gray-700">
               “The food tastes homemade and the delivery is always on time!”
             </p>
-            <h4 className="mt-4 font-semibold">– Sarah O.</h4>
+            <h4 className="mt-4 font-semibold">- Sarah O.</h4>
           </div>
           <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
             <p className="italic text-gray-700">
-              “Aldos is my go-to for quick lunch — affordable and tasty.”
+              “Aldos is my go-to for quick lunch affordable and tasty.”
             </p>
-            <h4 className="mt-4 font-semibold">– Daniel K.</h4>
+            <h4 className="mt-4 font-semibold">- Daniel K.</h4>
           </div>
           <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
             <p className="italic text-gray-700">
               “Love their rice bowls! Great portions and flavor.”
             </p>
-            <h4 className="mt-4 font-semibold">– Amina R.</h4>
+            <h4 className="mt-4 font-semibold">- Amina R.</h4>
           </div>
         </div>
       </section>
@@ -101,11 +109,11 @@ export default function Home() {
       <section className="bg-yellow-500 text-white py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">Order from Aldos Today</h2>
         <p className="mb-6">
-          Experience delicious meals made with love — ready when you are.
+          Experience delicious meals made with love ready when you are.
         </p>
-        <button className="bg-white text-yellow-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100">
-          Order Now
-        </button>
+        <div className="mt-6">
+          <Link href="/dashboard/new-order"><button className="bg-white hover:bg-yellow-600 text-yellow-400 px-6 py-3 rounded-lg font-medium">Order Now</button></Link>
+        </div>
       </section>
     </div>
   );
