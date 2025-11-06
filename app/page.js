@@ -1,13 +1,7 @@
-import { auth } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
-export default async function Home() {
-  const session = await auth();
-     if(!session) {
-       redirect("/auth/login")
-     }
+export default function Home() {
   return (
     <div className="bg-white text-gray-800">
       <section className="bg-[url('/interior.png')] bg-cover bg-center text-white py-40 px-6 text-center">
@@ -107,12 +101,12 @@ export default async function Home() {
       </section>
 
       <section className="bg-yellow-500 text-white py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Order from Aldos Today</h2>
+        <h2 className="text-3xl font-bold mb-4">Order from Final Today</h2>
         <p className="mb-6">
           Experience delicious meals made with love ready when you are.
         </p>
         <div className="mt-6">
-          <Link href="/dashboard/new-order"><button className="bg-white hover:bg-yellow-600 text-yellow-400 px-6 py-3 rounded-lg font-medium">Order Now</button></Link>
+          <Link href="/auth/login"><button className="bg-white hover:bg-yellow-600 text-yellow-400 px-6 py-3 rounded-lg font-medium">Order Now</button></Link>
         </div>
       </section>
     </div>
