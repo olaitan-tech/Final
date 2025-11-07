@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-white text-gray-800">
-      <section className="bg-[url('/interior.png')] bg-cover bg-center text-white py-40 px-6 text-center">
+      <section className="bg-[url('/interior.png')] bg-cover bg-center text-black py-40 px-6 text-center">
         <h1 className="text-4xl font-bold mb-4">Good Food, Fast Delivery</h1>
-        <p className="text-lg max-w-2xl mx-auto">Welcome to Aldo's your neighborhood restaurant serving freshly cooked meals that hit the spot, whether you're dining in or ordering online.</p>
+        <p className="text-xl max-w-2xl mx-auto">Welcome to Aldo's your neighborhood restaurant serving freshly cooked meals that hit the spot, whether you're dining in or ordering online.</p>
       </section>
 
       <section className="py-16 px-6 text-center">
