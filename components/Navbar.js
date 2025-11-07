@@ -24,18 +24,18 @@ export function Navbar () {
                     <Link href="/dashboard/profile"><CgProfile className="text-2xl cursor-pointer" /></Link>
                 </div>
                 <div className="block md:hidden">
-                    <RxHamburgerMenu onClick={toggleMenu} className="text-2xl text-blue-500 mt-2" />
+                    <RxHamburgerMenu onClick={toggleMenu} className="text-2xl text-orange-500 mt-2" />
                 </div>
             </div>
             {menuOpen &&(
             <div className="px-5 pb-1 flex flex-col gap-2 md:hidden">
                 <ul>
-                     <li><Link href="/">Home</Link></li>
-                     <li><Link href="/dashboard/new-order">New-Order</Link></li>
-                     <li><Link href="/dashboard/about-us">About Us</Link></li>
+                     <li><Link href="/" className="flex justify-center">Home</Link></li>
+                     <li><Link href="/dashboard/new-order" className="flex justify-center">New-Order</Link></li>
+                     <li><Link href="/dashboard/about-us" className="flex justify-center">About Us</Link></li>
                 </ul>
-                <Link href="/auth/login">    <button className="w-[60px] h-[30px] text-white bg-orange-500 rounded cursor-pointer">Login</button></Link>
-                <Link href="/dashboard/profile"><CgProfile className="text-2xl cursor-pointer" /></Link>
+                <Link href="/auth/login" className="flex justify-center">    <button className="w-[60px] h-[30px] text-white bg-orange-500 rounded cursor-pointer">Login</button></Link>
+                <Link href="/dashboard/profile" className="flex justify-center"><CgProfile className="text-2xl cursor-pointer" /></Link>
             </div>
             )}
         </main>
