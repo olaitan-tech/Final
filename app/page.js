@@ -6,7 +6,7 @@ export default function Home() {
     <div className="bg-white text-gray-800">
       <section className="bg-[url('/interior.png')] bg-cover bg-center text-white py-40 px-6 text-center">
         <h1 className="text-4xl font-bold mb-4">Good Food, Fast Delivery</h1>
-        <p className="text-lg max-w-2xl mx-auto">Welcome to Final your neighborhood restaurant serving freshly cooked meals that hit the spot, whether you're dining in or ordering online.</p>
+        <p className="text-lg max-w-2xl mx-auto">Welcome to Aldo's your neighborhood restaurant serving freshly cooked meals that hit the spot, whether you're dining in or ordering online.</p>
       </section>
 
       <section className="py-16 px-6 text-center">
@@ -101,7 +101,7 @@ export default function Home() {
       </section>
 
       <section className="bg-yellow-500 text-white py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Order from Final Today</h2>
+        <h2 className="text-3xl font-bold mb-4">Order from Aldo's Today</h2>
         <p className="mb-6">
           Experience delicious meals made with love ready when you are.
         </p>

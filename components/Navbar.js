@@ -13,7 +13,7 @@ export function Navbar () {
     return (
         <main className="bg-gray-100 shadow-gray-300 w-full sticky top-0 z-10">
             <div className="flex justify-between h-[50px] pt-3 px-5">
-                <h1 className="font-bold text-2xl text-orange-500">Final</h1>
+                <h1 className="font-bold text-2xl text-orange-500">Aldo's</h1>
                 <ul className="hidden md:flex gap-10 md:font-semibold md:cursor-pointer">
                     <Link href="/"><li>Home</li></Link>
                     <Link href="/dashboard/new-order"><li>New-Order</li></Link>

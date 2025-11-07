@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "final",
+  title: "Aldo's",
   description: "Restaurant website",
 };
 
